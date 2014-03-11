@@ -1,6 +1,94 @@
-*.class
+import java.util.Scanner;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+public class TestFunctions{
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("There are seven function here:\n a f(x) = x^2;\n b f(x) = sin(x);\n c f(x) = cos(x;\n d f(x) = tan(x);\n e f(x) = cos(x) + 5sin(x);\n f f(x) = 5cos(x) + sin(x);\n g f(x) = log(x) + x^2)");
+    System.out.println("Enter the number in function a");
+    System.out.println("Enter the number in function b");
+    System.out.println("Enter the number in function c");
+    System.out.println("Enter the number in function d");
+    System.out.println("Enter the number in function e");
+    System.out.println("Enter the number in function f");
+    System.out.println("Enter the number in function g");
+    
+    double a1 = input.nextDouble();
+    double b1 = input.nextDouble();
+    double c1 = input.nextDouble();
+    double d1 = input.nextDouble();
+    double e1 = input.nextDouble();
+    double f1 = input.nextDouble();
+    double g1 = input.nextDouble();
+    
+    Functions answer = new Functions(a1, b1, c1, d1, e1, f1, g1);
+    
+    System.out.println("The answer of function a is:" + answer.getFunction_a() );
+    
+    System.out.println("The answer of function b is:" + answer.getFunction_b() );
+    
+    System.out.println("The answer of function c is:" + answer.getFunction_c() );
+    
+    System.out.println("The answer of function d is:" + answer.getFunction_d() );
+    
+    System.out.println("The answer of function e is:" + answer.getFunction_e() );
+    
+    System.out.println("The answer of function f is:" + answer.getFunction_f() );
+    
+    System.out.println("The answer of function g is:" + answer.getFunction_g() );
+    
+    }
+}
+
+  class Functions{
+    Functions(){
+    }
+    
+    double a2 = 0;
+    double b2 = 0;
+    double c2 = 0;
+    double d2 = 0;
+    double e2 = 0;
+    double f2 = 0;
+    double g2 = 0;
+    
+    
+    Functions( double a1, double b1, double c1, double d1, double e1, double f1, double g1){
+      a2 = a1;
+      b2 = b1;
+      c2 = c1;
+      d2 = d1;
+      e2 = e1;
+      f2 = f1;
+      g2 = g1;
+    }
+    
+    double getFunction_a(){
+      return (Math.pow(a2, 2));
+    }
+    
+    double getFunction_b(){
+      return (Math.sin(b2));
+    }
+    
+    double getFunction_c(){
+      return (Math.cos(c2));
+    }
+    
+    double getFunction_d(){
+      return (Math.tan(d2));
+    }
+
+    double getFunction_e(){
+      return (Math.cos(e2) + 5 * Math.sin(e2));
+    }
+    
+    double getFunction_f(){
+      return (5 * Math.cos(f2) + Math.sin(f2));
+    }    
+    
+    double getFunction_g(){
+      return (Math.log(g2) + g2);
+    }
+  
+  }
